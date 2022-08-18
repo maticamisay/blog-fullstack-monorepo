@@ -1,10 +1,10 @@
 import './App.css';
 import Navbar from './components/NavBar';
 import Footer from './components/Footer';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import {  Routes, Route, useNavigate } from 'react-router-dom';
 import Home from './Layouts/Home';
 import Login from './Layouts/Login';
-import LoginContext, { LoginProvider } from './context/LoginContext';
+import LoginContext from './context/LoginContext';
 import Admin from './Layouts/Admin';
 import CreatePost from './AdminLayout/Components/CreatePost';
 import PrivateRoute from './Routes/PrivateRoute';
@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     isLogged()
-    if (isLoggedIn == false) {
+    if (isLoggedIn === false) {
       navigate("/");
     }
   }, [])

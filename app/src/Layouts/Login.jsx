@@ -26,10 +26,6 @@ const Login = () => {
     }
   };
 
-  const Navigate = () => {
-    isLoggedIn && navigate("/admin");
-  };
-
   function simulateNetworkRequest() {
     return new Promise((resolve) => setTimeout(resolve, 2000));
   }
@@ -38,10 +34,16 @@ const Login = () => {
     if (isLoading) {
       simulateNetworkRequest().then(() => {
         setLoading(false);
+        console.log("hola");
         Navigate();
       });
     }
-  }, [isLoading, isLoggedIn]);
+    const Navigate = () => {
+      console.log("navigate : " + isLoggedIn);
+      isLoggedIn && navigate("/admin");
+    };
+    Navigate();
+  }, [isLoading, isLoggedIn, navigate]);
 
   return (
     <Container className="d-flex justify-content-center align-items-center my-5 login-container">

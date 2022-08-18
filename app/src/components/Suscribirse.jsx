@@ -1,11 +1,9 @@
 import React from "react";
-import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Card, Form, Row } from "react-bootstrap";
 
 const Suscribirse = ({ title, description }) => {
   return (
-    <Container>
       <Row>
-        <Col lg={12} md={12} sm={12} xs={10}>
           <Card className="bg-light">
             <Card.Body>
               <Card.Title>{title}</Card.Title>
@@ -24,9 +22,7 @@ const Suscribirse = ({ title, description }) => {
                 </Form>
             </Card.Body>
           </Card>
-        </Col>
       </Row>
-    </Container>
   );
 };
 

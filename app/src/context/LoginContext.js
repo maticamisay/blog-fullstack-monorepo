@@ -17,6 +17,7 @@ export function LoginProvider({ defaultValue = [], children }) {
             const user = await loginServices.login({ username, password });
             setUser(user);
             setIsLoggedIn(true);
+            console.log(isLoggedIn);
             setToken(user.token);
             window.localStorage.setItem(
                 'loggedPostAppUser', JSON.stringify(user)

@@ -4,7 +4,7 @@ import Buscador from '../components/Buscador'
 
 const ContainerBuscador = () => {
   return (
-      <Container><Buscador/></Container>
+      <Container className='py-4'><Buscador/></Container>
   )
 }
 

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const PostLayout = ({ children, title, titleBtn }) => {
   return (
-    <Container className="post-layout bg-light rounded py-3">
+    <Container className="post-layout card bg-light rounded py-3 mb-3">
       <Container>
         <h2>{title}</h2>
         {children}

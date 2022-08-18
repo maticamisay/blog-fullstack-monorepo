@@ -12,7 +12,7 @@ const MisPosts = () => {
   useEffect(() => {
     postService.getAll().then((initialPosts) => {
       const userdata = initialPosts.filter(
-        (post) => post.user.username == user.username
+        (post) => post.user.username === user.username
       );
       setData(userdata);
     });

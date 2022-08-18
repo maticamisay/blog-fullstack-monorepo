@@ -4,7 +4,7 @@ import Suscribirse from "../components/Suscribirse";
 
 const ContainerBuscador = ({title,description}) => {
   return (
-    <Container className="contenedor">
+    <Container className="py-4">
       <Suscribirse title={title} description={description}/>
     </Container>
   );
