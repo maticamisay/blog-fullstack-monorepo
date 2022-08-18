@@ -1,0 +1,18 @@
+/* post detail */
+.post-detail {
+  margin-top: 6rem;
+  padding: 0 2rem;
+  min-height: 60vh;
+  background-color: #dcd7c9;
+}
+.post-detail.container > p > p > img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+.post-detail-title {
+  padding-top: 2rem;
+}
+.post-detail-content {
+  padding: .5rem 0;
+}

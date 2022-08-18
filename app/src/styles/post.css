@@ -1,0 +1,22 @@
+.post {
+  padding-bottom: 1rem;
+}
+.post-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.post-body {
+  display: flex;
+}
+.post-icon {
+  font-size: 2rem;
+  color: #544030;
+}
+.post-link {
+  list-style: none;
+  text-decoration: none !important;
+  color: black !important;
+}

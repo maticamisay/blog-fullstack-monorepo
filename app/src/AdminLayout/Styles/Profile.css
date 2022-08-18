@@ -1,0 +1,32 @@
+.profile {
+  margin: 8rem auto 300px auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.profile-container {
+  padding-top: 2rem;
+}
+.profile-container-data {
+  display: flex;
+  /* gap: 2rem; */
+  padding-bottom: 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.user-data {
+  width: fit-content;
+}
+.profile-container-data > button {
+  margin: 0 2rem;
+  padding: 0 2rem;
+  border: 1px solid #a27b5c;
+  border-radius: 1rem;
+  background-color: transparent;
+  transition: background-color, border;
+  transition-duration: 300ms;
+}
+.profile-container-data > button:hover {
+  border: 1px solid transparent;
+  background-color: #a27b5c;
+}
