@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "workspaces":[
+  "workspaces": [
     "api",
     "app"
   ],
@@ -13,5 +13,12 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "overrides": {
+    "autoprefixer": "10.4.5"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.5",
+    "bootstrap": "^5.2.0-beta1"
+  }
 }

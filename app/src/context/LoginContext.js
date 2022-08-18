@@ -1,5 +1,5 @@
-import { createContext, useState } from "react";
-import loginServices from "../services/login";
+import { createContext, useEffect, useState } from "react";
+import {login,checkJWT} from "../services/login";
 const LoginContext = createContext('');
 
 export function LoginProvider({ defaultValue = [], children }) {
@@ -14,7 +14,7 @@ export function LoginProvider({ defaultValue = [], children }) {
     const handleLogin = async (username, password) => {
 
         try {
-            const user = await loginServices.login({ username, password });
+            const user = await login({ username, password });
             setUser(user);
             setIsLoggedIn(true);
             console.log(isLoggedIn);
@@ -42,14 +42,14 @@ export function LoginProvider({ defaultValue = [], children }) {
             const { username, token } = JSON.parse(localLoggedUser);
             const tokencito = `Bearer ${token}`
             setToken(tokencito)
-            loginServices.checkJWT(username, tokencito).then(e => {
+            checkJWT(username, tokencito).then(e => {
                 if (e.status === 200) {
                     setUser(e.data.user);
                     setIsLoggedIn(true);
                 }
             })
         } catch (e) {
-           console.log(e);
+           console.log('Not logged');
         }
     }
 
@@ -58,6 +58,9 @@ export function LoginProvider({ defaultValue = [], children }) {
         setIsLoggedIn(false)
         window.localStorage.removeItem('loggedPostAppUser')
     }
+    useEffect(()=>{
+        isLogged()
+    },[isLoggedIn])
     return (
         <LoginContext.Provider value={{ token, setToken, isLogged, isLoggedIn, handleLoggedOut, username, setUsername, password, setPassword, handleLogin, errorMessage, user }}>
             {children}

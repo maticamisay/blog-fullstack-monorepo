@@ -15,4 +15,4 @@ const checkJWT = async (user, token) => {
     }
     return await axios.post(baseUrlJWT, user, config)
 }
-export default { login, checkJWT }
+export { login, checkJWT }
