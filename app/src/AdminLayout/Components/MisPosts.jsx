@@ -16,7 +16,7 @@ const MisPosts = () => {
       );
       setData(userdata);
     });
-  }, []);
+  }, [user]);
   return (
     <Container>
       <h1>{user.username}</h1>

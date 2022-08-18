@@ -24,7 +24,7 @@ function App() {
     if (isLoggedIn === false) {
       navigate("/");
     }
-  }, [])
+  }, [isLoggedIn, isLogged, navigate])
 
   return (
     <>

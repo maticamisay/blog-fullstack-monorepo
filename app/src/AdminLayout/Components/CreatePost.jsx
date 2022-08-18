@@ -20,7 +20,7 @@ const CreatePost = () => {
       const user = JSON.parse(loggedUserJSON);
       setToken(`Bearer ${user.token}`);
     }
-  }, []);
+  }, [setToken]);
   const modules = {
     toolbar: [
       [{ font: [] }],
