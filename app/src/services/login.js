@@ -1,6 +1,6 @@
 import axios from "axios";
-const baseUrl = 'http://localhost:3001/api/login'
-const baseUrlJWT = 'http://localhost:3001/api/login/JWT'
+const baseUrl = '/api/login'
+const baseUrlJWT = '/api/login/JWT'
 
 
 const login = async credentials => {
